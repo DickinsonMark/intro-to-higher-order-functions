@@ -15,8 +15,8 @@ console.log(filter([1, 2, 3, 4], onlyOdd));
 
 // #4.
 
-// console.log('Running sumTwoNumbers(3)(9) expecting: 12');
-// console.log(sumTwoNumbers(3)(9));
+console.log('Running sumTwoNumbers(3)(9) expecting: 12');
+console.log(sumTwoNumbers(3)(9));
 
 // #1.    Invocation:	any([ 8, 9, 10, 11 ], greaterThan10)  Output: true  Hint: greaterThan10 is a callback
 
@@ -60,3 +60,9 @@ function onlyOdd(num) {
 }
 
 //  #4.   Invocation:  sumTwoNumbers(3)(9)	Output:  12  Hint: Return a function
+
+function sumTwoNumbers(num1) {
+  return function addition(num2) {
+    return num1 + num2
+  };
+};
